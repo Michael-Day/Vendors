@@ -1,0 +1,163 @@
+/*
+------------
+Styles for Vendors piece
+13 Jul 2020 / tw: @mday / insta: @mday151
+------------
+*/
+
+body {
+  padding: 0;
+  margin: 16px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.parent {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+}
+
+.container {
+  background: black;
+    color: snow;
+    font-size: 12vw;
+    padding: 1.7rem;
+    text-align: center;
+    border: 0px solid;
+    opacity: 0%;
+}
+.animate {
+  animation: fader 4s ease 1;
+}
+@keyframes fader {
+	0% {
+		opacity: 100%;
+	}
+  15% {
+    /* opacity: 100%; */
+  }
+  85% {
+    opacity: 100%;
+  }
+	100% {
+		opacity: 0%;
+	}
+}
+.myButton {
+  border: 0.1rem solid;
+  padding: 2.5rem;
+  margin-top: 4rem;
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+  border-radius: 2rem;
+  background-color: rgba(230, 240, 250, 1);
+}
+
+.myButton:hover {
+    background-color: rgba(150, 170, 180, 1);
+}
+
+.myButton:active {
+    box-shadow:  inset 2px 2px 3px rgba(20, 0, 0, .6);
+}
+
+.intro {
+    z-index: 5;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    color: black;
+    padding: 1.7rem;
+    margin: 0rem;
+    text-align: center;
+    opacity: 50%;
+    animation: intro 1s ease 1;
+}
+.outro {
+  animation: outro 1s ease 1;
+}
+.hea {
+  font-family: 'Roboto', serif;
+  font-size: 1.4rem;
+}
+ .bod {
+  font-size: 1rem;
+  line-height: 160%;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+@keyframes intro {
+	0% {
+		opacity: 0%;
+	}
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes outro {
+	0% {
+		opacity: 100%;
+	}
+  100% {
+    opacity: 0%;
+  }
+}
+
+/* Small -------------------------------- */
+@media screen and (min-width: 568px) {
+  .container {
+    padding: 1.8rem;
+    /* margin: 3rem; */
+    font-size: 8vw;
+    border: 0px solid;
+  }
+  .myButton{
+    margin-top: 0.5rem;
+  }
+  .intro {
+    padding-top: 0.1rem;
+  }
+}
+
+/* Medium -------------------------------- */
+@media screen and (min-width: 1023px) {
+  .hea{
+    font-size: 2.4rem;
+  }
+  .bod{
+    font-size: 1.6rem;
+    line-height: 160%;
+  }
+  .myButton{
+    margin-top: 2.5rem;
+  }
+}
+
+
+/* Huge -------------------------------- */
+
+@media screen and (min-width: 1300px) {
+  .container {
+    padding: 7.1rem;
+    margin: 4rem;
+    font-size: 8vw;
+    border: 0px solid;
+  }
+  .hea{
+    font-size: 3rem;
+  }
+  .bod{
+    font-size: 2.6rem;
+    line-height: 160%;
+  }
+  .myButton{
+    margin-top: 2.5rem;
+  }
+}

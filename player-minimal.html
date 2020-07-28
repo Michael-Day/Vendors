@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <title>Minimal Player</title>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="icon" type="image/png" sizes="174x174" href="./favicon.png">
+
+     <script src="https://unpkg.com/tone@14.7.33"></script>
+     <script src="patterns.js"></script>
+     <script src="tone-code.js"></script>
+
+     <style type="text/css">
+     .myButton{
+          padding: 3rem;
+     }
+     </style>
+</head>
+<body>
+
+     <button class = "myButton" id = "playButton" type="button">
+          &#8594;
+     </button>
+
+     <script type="text/javascript">
+
+     // sets up the button & binds the starts
+     var el = document.getElementById('playButton');
+     el.addEventListener('click', function() {
+          if (!ready){
+               console.log("not ready");
+               return;
+          } else {
+               Tone.start();
+               Tone.Transport.start();
+               // topSeq.start();
+               bassSeq.start("2m");
+               kickSeq.start("2m");
+               snareSeq.start("6m");
+
+               console.log("started");
+          }
+     });
+
+     </script>
+
+</body>
+</html>

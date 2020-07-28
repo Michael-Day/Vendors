@@ -1,0 +1,93 @@
+
+<html>
+<head>
+     <meta charset="UTF-8">
+     <!-- <script language="javascript" type="text/javascript" src="p5.js"></script> -->
+     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+     <!-- <script language="javascript" src="p5.sound.js"></script> -->
+     <script language="javascript" src="MailOnline-edit.js"></script>
+     <!--<script language="javascript" src="../addons/p5.sound.js"></script>-->
+     <!-- <script language="javascript" src="Tone.js"></script> -->
+     <script src="https://unpkg.com/tone@14.7.33"></script>
+     <script src="patterns.js"></script>
+     <script src="tone-code.js"></script>
+
+     <script language="javascript" type="text/javascript" src="sketch-new.js"></script>
+
+     <!-- <script language="javascript" type="text/javascript" src="colorshift.js"></script> -->
+     <!-- this line removes any default padding and style. you might only need one of these values set. -->
+     <link rel="stylesheet" type="text/css" href="styles.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+     <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+     <div class="parent">
+          <div class="container">
+          </div>
+          <div class="intro">
+               
+               <button class = "myButton" id="myButton" type="button">
+                    Start &#8594;
+               </button>
+          </div>
+     </div> <!-- / parent -->
+     <!-- <audio id="myloop">
+
+     </audio> -->
+     <script language="javascript">
+
+     // // Web Audio API (crossbrowser)
+     // const AudioContext = window.AudioContext || window.webkitAudioContext;
+     // const audioContext = new AudioContext();
+     // // get the audio element
+     // const audioElement = document.querySelector('audio');
+     // // // pass it into the audio context, is this suspended?
+     // const track = audioContext.createMediaElementSource(audioElement);
+     //
+     //
+     // // select our play button
+     // const playButton = document.querySelector('button');
+     // track.connect(audioContext.destination);
+     //
+     // playButton.addEventListener('click', function() {
+     //      // playButton.innerHTML = `Click count: ${event.detail}`;
+     //      // check if context is in suspended state (autoplay policy)
+     //      if (audioContext.state === 'suspended') {
+     //           audioContext.resume();
+     //           // console.log("audio context resumed");
+     //      }
+     // }, false);
+
+     // -------- old
+     // sets up the button & binds the starts
+    // var el = document.getElementById('myButton');
+    // el.addEventListener('click', function() {
+    //     Tone.Transport.start();
+    //     // this needs to happen on cue, ie, a single set interval
+    //     player.sync().start("2m"); // 2 measures
+    //     console.log("star");
+    // });
+    // sets up the button & binds the starts
+    var el = document.getElementById('myButton');
+    el.addEventListener('click', function() {
+         if (!ready){
+              console.log("not ready");
+              return;
+         } else {
+              Tone.start();
+              Tone.Transport.start();
+              bassSeq.start("2m");
+              kickSeq.start("2m");
+              snareSeq.start("6m");
+              console.log("started");
+         }
+    });
+
+
+     </script>
+
+
+</body>
+</html>
