@@ -8,6 +8,7 @@ let ready = false;
 // set the tempo
 Tone.Transport.bpm.value = 100;
 Tone.Master.volume.value = -4;
+Tone.context.latencyHint = 'playback';
 
 let synth, kickSynth, snareSynth, topSynth;
 // Can be 'sine', 'sawtooth', 'triangle', 'square'

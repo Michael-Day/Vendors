@@ -27,7 +27,7 @@
           <div class="container">
           </div>
           <div class="intro">
-               
+
                <button class = "myButton" id="myButton" type="button">
                     Start &#8594;
                </button>
@@ -76,7 +76,7 @@
               console.log("not ready");
               return;
          } else {
-              Tone.start();
+              Tone.start("+0.1");
               Tone.Transport.start();
               bassSeq.start("2m");
               kickSeq.start("2m");
